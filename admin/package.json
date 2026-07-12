@@ -1,0 +1,14 @@
+{
+  "name": "office-automation-admin",
+  "version": "2.0.0",
+  "description": "AI 写办公自动化脚本 — 管理面板",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "dotenv": "^16.4.0"
+  }
+}

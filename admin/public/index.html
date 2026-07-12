@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoOffice 管理面板</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 侧栏 -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h1>⚡ 自动化</h1>
+        <p class="subtitle">自然语言驱动的办公自动化</p>
+      </div>
+      <nav id="nav">
+        <div class="nav-section">
+          <h3>场景列表</h3>
+          <ul id="module-list"></ul>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="btn-exec-history" class="btn-ghost">📋 执行历史</button>
+      </div>
+    </aside>
+
+    <!-- 主面板 -->
+    <main id="main">
+      <!-- 头部 -->
+      <header id="header">
+        <div class="mode-switch">
+          <span class="mode-label">模式:</span>
+          <select id="mode-select">
+            <option value="demo">Demo (免配置)</option>
+            <option value="real">Real (需 API Key)</option>
+          </select>
+        </div>
+        <div class="header-right">
+          <span id="status-badge" class="badge badge-success">● 运行中</span>
+        </div>
+      </header>
+
+      <!-- 内容区 -->
+      <div id="content">
+        <!-- 欢迎页 / AI 输入 -->
+        <section id="page-welcome" class="page active">
+          <div class="welcome-card">
+            <h2>👋 用自然语言指挥自动化</h2>
+            <p class="desc">描述你的办公需求，AI 自动生成并执行脚本</p>
+            <div class="input-group">
+              <textarea id="ai-prompt" rows="3" placeholder="例如：生成季度销售报表&#10;把 downloads 目录的文件按类型整理&#10;给王经理发邮件提醒明天开会"></textarea>
+              <button id="btn-ai-run" class="btn-primary">🚀 执行</button>
+            </div>
+            <div id="prompt-examples" class="examples">
+              <span class="example-tag" data-prompt="生成季度销售报表，包含收入、成本、利润和图表">📊 生成销售报表</span>
+              <span class="example-tag" data-prompt="把 downloads 目录的文件按类型整理到子文件夹">📁 整理文件</span>
+              <span class="example-tag" data-prompt="给我整理一下今天下午的会议记录">📝 处理会议纪要</span>
+              <span class="example-tag" data-prompt="写一封提醒邮件给团队，通知明天下午开会">✉️ 发送提醒邮件</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 模块详情 -->
+        <section id="page-module" class="page">
+          <div id="module-detail"></div>
+        </section>
+
+        <!-- 执行结果 -->
+        <section id="page-result" class="page">
+          <div id="result-panel">
+            <div class="result-header">
+              <h2>执行结果</h2>
+              <button id="btn-back" class="btn-ghost">← 返回</button>
+            </div>
+            <div id="result-content" class="result-body">
+              <div class="result-log" id="result-log"></div>
+              <div class="result-output" id="result-output"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 执行历史 -->
+        <section id="page-history" class="page">
+          <div class="history-header">
+            <h2>执行历史</h2>
+            <button id="btn-back-from-history" class="btn-ghost">← 返回</button>
+          </div>
+          <div id="history-list"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

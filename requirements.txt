@@ -1,0 +1,17 @@
+# 项目依赖
+# Day 5: Excel 处理
+openpyxl>=3.1.0
+pandas>=2.2.0
+
+# Day 6: 邮件发送
+# smtplib 是 Python 标准库，无需额外安装
+
+# Day 8: 数据爬取
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Day 10: GUI (可选)
+# tkinter 是 Python 标准库，无需额外安装
+
+# Day 12: 打包
+# pyinstaller>=6.0.0

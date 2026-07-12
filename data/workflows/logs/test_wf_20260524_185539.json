@@ -1,0 +1,35 @@
+{
+  "workflow": "test_wf",
+  "status": "completed",
+  "steps": [
+    {
+      "step": 1,
+      "module": "converter",
+      "action": "list_supported",
+      "params": {},
+      "result": {
+        "success": true,
+        "conversions": [
+          {
+            "from": "csv",
+            "to": "xlsx",
+            "label": "csv→xlsx"
+          },
+          {
+            "from": "txt",
+            "to": "docx",
+            "label": "txt→docx"
+          },
+          {
+            "from": "docx",
+            "to": "txt",
+            "label": "docx→txt"
+          }
+        ]
+      },
+      "timestamp": "2026-05-24T18:55:39.416266"
+    }
+  ],
+  "started_at": "2026-05-24T18:55:39.416266",
+  "finished_at": "2026-05-24T18:55:39.416420"
+}
